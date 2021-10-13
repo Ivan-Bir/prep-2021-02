@@ -3,9 +3,9 @@
 #define ERR_ARGS_COUNT (-1)
 #define ERR_WRONG_FLG (-2)
 
-#define TST_FOO_FIX     1
-#define TST_FOO_IMPL    2
-#define TST_MOD_IMPL    3
+#define TST_FOO_FIX     11
+#define TST_FOO_IMPL    21
+#define TST_MOD_IMPL    31
 
 
 /* NOTE(stitaevskiy):
