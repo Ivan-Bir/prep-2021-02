@@ -1,5 +1,4 @@
 #include "../include/utils.h"
-#include <stdlib.h>
 #include <stdio.h>
 
 int timer_from(unsigned int from) {
@@ -17,8 +16,8 @@ int timer_from(unsigned int from) {
     return counter;
 }
 
-int custom_pow(int base, int pow) {
-    int result = base;
+long long int custom_pow(int base, int pow) {
+    long long int result = base;
     if (pow == 0) {return 1;}
     for (int i = pow; i > 1; --i) {
         result *= base;
