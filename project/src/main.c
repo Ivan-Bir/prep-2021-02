@@ -9,6 +9,7 @@
 #define TST_FOO_FIX     1
 #define TST_FOO_IMPL    2
 #define TST_MOD_IMPL    3
+#define TST_MOD_REC     4
 
 
 /* NOTE(stitaevskiy):
@@ -42,25 +43,28 @@ int main(int argc, const char* argv[]) {
             printf("%d\n", ticks_count);
             break;
         }
-         case TST_FOO_IMPL: {
+        case TST_FOO_IMPL: {
             if (argc == 4) {
                 int base = atoi(data);
                 int pow =  atoi(argv[3]);
                 long long res = custom_pow(base, pow);    // TODO(Ivan Biryukov): Stuff.
                 printf("%lld\n", res);
              } else {
-                 return ERR_ARGS_COUNT;
+                return ERR_ARGS_COUNT;
              }
              break;
          }
-         case TST_MOD_IMPL: {
-             int num = atoi(data);
-             printf("%d\n", prime_number(num));
-             break;
-
+        case TST_MOD_IMPL: {
+            int num = atoi(data);
+            printf("%d\n", prime_number(num));
+            break;
+        }
         //     // TODO: Print to stdout `1` if `num` is prime number and `0` otherwise
         //     // This function MUST be implemented in
         //     // a separate C-module (not in `main` or `utils` module)
+        case TST_MOD_REC: {
+            printf("Finish me!\n");
+            break;
         }
         default: {
             return ERR_WRONG_FLG;
