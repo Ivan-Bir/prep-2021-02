@@ -1,5 +1,6 @@
 #include "../include/utils.h"
 #include "../include/simple.h"
+#include "../include/recurs.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -63,7 +64,9 @@ int main(int argc, const char* argv[]) {
         //     // This function MUST be implemented in
         //     // a separate C-module (not in `main` or `utils` module)
         case TST_MOD_REC: {
-            printf("Finish me!\n");
+            int n = atoi(data);
+            output_integers(n);
+            printf("\n");
             break;
         }
         default: {
