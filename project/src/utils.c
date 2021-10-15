@@ -1,8 +1,9 @@
 #include "../include/utils.h"
 #include <stdio.h>
+#include <stdlib.h>
 
-int timer_from(unsigned int from) {
-    int counter = 0;
+size_t timer_from(unsigned int from) {
+    size_t counter = 0;
     for (int i = from; i > 0; --i) {
         ++counter;
         printf("%d ", i);
@@ -24,10 +25,3 @@ long long int custom_pow(int base, int pow) {
     }
     return result;
 }
-
-// TODO(Ivan Biryukov): Stuff. Implement `power of` function
-/*
-int custom_pow(int base, int power) {
-    return 0;
-}
-*/

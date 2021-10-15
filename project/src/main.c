@@ -13,21 +13,6 @@
 #define TST_MOD_REC     4
 
 
-/* NOTE(stitaevskiy):
- * We use `atoi` function just for simplification and code reducing.
- * This function doesn't report conversation errors.
- * For safety program we recommend using `strtol` and its analogs.
- * (See `man atoi` and `man strtol` for more info).
- *
- * const char str_num[] = "1234";
- * char* end = NULL;
- * int val = (int) strtol(str_num, &end, 0);
- * if (end != '\0') {
- *     //ERROR
- * }
- *
- * */
-
 int main(int argc, const char* argv[]) {
     if (argc < 3) {
         printf("%d\n", ERR_ARGS_COUNT);
@@ -37,33 +22,30 @@ int main(int argc, const char* argv[]) {
     int Test_case = atoi(argv[1]);
     const char* data = argv[2];
 
-    switch (Test_case) {
+    switch (Test_case) {  // Counter with total output
         case TST_FOO_FIX: {
             unsigned int to = atoi(data);
-            int ticks_count = timer_from(to);
-            printf("%d\n", ticks_count);
+            size_t ticks_count = timer_from(to);
+            printf("%zu\n", ticks_count);
             break;
         }
-        case TST_FOO_IMPL: {
+        case TST_FOO_IMPL: {  // The function returns the result of raising base to the power pow
             if (argc == 4) {
                 int base = atoi(data);
                 int pow =  atoi(argv[3]);
-                long long res = custom_pow(base, pow);    // TODO(Ivan Biryukov): Stuff.
+                long long res = custom_pow(base, pow);
                 printf("%lld\n", res);
              } else {
                 return ERR_ARGS_COUNT;
              }
              break;
-         }
-        case TST_MOD_IMPL: {
+        }
+        case TST_MOD_IMPL: {  // If number is simlpe return 1, otherwise 0
             int num = atoi(data);
             printf("%d\n", prime_number(num));
             break;
         }
-        //     // TODO: Print to stdout `1` if `num` is prime number and `0` otherwise
-        //     // This function MUST be implemented in
-        //     // a separate C-module (not in `main` or `utils` module)
-        case TST_MOD_REC: {
+        case TST_MOD_REC: {  // Print integers from 0 to n
             int n = atoi(data);
             output_integers(n);
             printf("\n");
