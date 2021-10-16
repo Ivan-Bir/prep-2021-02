@@ -3,10 +3,10 @@ HDRS_DIR = project/include
 
 # XXX: Don't forget backslash at the end of any line except the last one
 SRCS = \
-       project/src/main.c \
-       project/src/utils.c \
-	   project/src/simple.c \
-	   project/src/recurs.c
+        project/src/main.c \
+        project/src/utils.c \
+	  	project/src/is_prime_number.c \
+		project/src/out_integers_rec.c
 
 .PHONY: all build rebuild check test clean
 

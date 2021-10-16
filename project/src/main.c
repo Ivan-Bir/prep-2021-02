@@ -1,6 +1,6 @@
-#include "../include/utils.h"
-#include "../include/simple.h"
-#include "../include/recurs.h"
+#include "utils.h"
+#include "is_prime_number.h"
+#include "out_integers_rec.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -19,10 +19,10 @@ int main(int argc, const char* argv[]) {
         return ERR_ARGS_COUNT;
     }
 
-    int Test_case = atoi(argv[1]);
+    int test_case = atoi(argv[1]);
     const char* data = argv[2];
 
-    switch (Test_case) {  // Counter with total output
+    switch (test_case) {  // Counter with total output
         case TST_FOO_FIX: {
             unsigned int to = atoi(data);
             size_t ticks_count = timer_from(to);
@@ -41,13 +41,13 @@ int main(int argc, const char* argv[]) {
              break;
         }
         case TST_MOD_IMPL: {  // If number is simlpe return 1, otherwise 0
-            int num = atoi(data);
-            printf("%d\n", prime_number(num));
+            int number = atoi(data);
+            printf("%d\n", is_prime_number(number));
             break;
         }
-        case TST_MOD_REC: {  // Print integers from 0 to n
-            int n = atoi(data);
-            output_integers(n);
+        case TST_MOD_REC: {  // Print integers from 0 to number
+            int number = atoi(data);
+            out_integers_rec(number);
             printf("\n");
             break;
         }

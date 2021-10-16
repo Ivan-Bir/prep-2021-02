@@ -1,4 +1,4 @@
-#include "../include/utils.h"
+#include "utils.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -19,7 +19,9 @@ size_t timer_from(unsigned int from) {
 
 long long int custom_pow(int base, int pow) {
     long long int result = base;
-    if (pow == 0) {return 1;}
+    if (pow == 0) {
+        return 1;
+    }
     for (int i = pow; i > 1; --i) {
         result *= base;
     }
