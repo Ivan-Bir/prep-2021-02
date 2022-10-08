@@ -1,0 +1,6 @@
+#ifndef PROJECT_INCLUDE_OUT_INTEGERS_REC_H_
+#define PROJECT_INCLUDE_OUT_INTEGERS_REC_H_
+
+void out_integers_rec(int number);
+
+#endif  // PROJECT_INCLUDE_OUT_INTEGERS_REC_H_
